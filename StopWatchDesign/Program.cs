@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,19 +11,27 @@ namespace StopWatch
     {
         static void Main(string[] args)
         {
-            
-                var startTime = StopWatch.Start();
 
-                System.Console.WriteLine("Start Time : " + startTime);
+            var startTime = StopWatch.Start();
 
-               Thread.Sleep(60000);
-                var endTime = StopWatch.Stop();
+            System.Console.WriteLine("Start Time : " + startTime);
 
-                System.Console.WriteLine("End Time : " + endTime);
+            Thread.Sleep(60000);
+            var endTime = StopWatch.Stop();
 
-                
-            
-            
+            System.Console.WriteLine("End Time : " + endTime);
+            Console.WriteLine(StopWatch.Duration());
+
+            startTime = StopWatch.Start();
+
+            System.Console.WriteLine("Start Time : " + startTime);
+
+            Thread.Sleep(60000);
+            endTime = StopWatch.Stop();
+
+            System.Console.WriteLine("End Time : " + endTime);
+            Console.WriteLine(StopWatch.Duration());
+
         }
     }
 }
